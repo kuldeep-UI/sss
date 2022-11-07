@@ -1,0 +1,76 @@
+html, body{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+/*Google Font  */
+:root{
+    --font-default:"font-family: 'Montserrat', sans-serif";
+    --font-primary:"font-family: 'Montserrat";
+    --font-secondart:"font-family: 'Montserrat', sans-serif";
+}
+    /* Color */
+:root{
+--color-default: #fff;
+--color-primary: #f75506;
+--color-secondary: #121212;
+    }
+
+/* navbar css*/
+.navbar {
+    background: var(--color-secondary);
+ }
+ .first-navbar a ,i, .second-navbar a, li{
+    color: var(--color-default)
+ }
+ .second-navbar  li,a{
+    text-transform: uppercase;
+    font-family: var(--font-primary);
+ }
+ .second-navbar span{
+font-size: 12px;
+ }
+ .navbar-toggler {
+color: red;
+background-color: aliceblue;
+
+ }
+/*End navbar css*/
+/* start header section */
+.header{
+    background-color: var(--color-secondary);
+}
+
+/* End header section */
+
+
+
+i{
+   
+    border-radius: 50%;
+    padding: 7px;
+    }
+    @media (max-width:593px) {
+        .first-navbar{
+           visibility: initial;
+    
+        }}
+        .navbar-toggler,
+        .navbar-toggler:focus,
+        .navbar-toggler:active,
+        .navbar-toggler-icon:focus {
+            outline: none;
+            border: none;
+            box-shadow: none;
+        }
+/* end navbar css */
+.navbar-toggler>.close {
+    display:inline;
+}
+
+.navbar-toggler.collapsed>.close, .navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
+    display:none;
+}
