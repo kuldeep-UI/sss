@@ -150,7 +150,7 @@ background-color: aliceblue;
 /* start header section */
 .header{
     background-color: var(--color-secondary);
-    background-image: url(../IMAGES/TOP\ BG\ IMAGE.png);
+    background-image: url(IMAGES/TOP\ BG\ IMAGE.png);
 }
 .text-col-second{
   justify-content: center;
@@ -314,7 +314,7 @@ transition: 1.1s;
 
 /* Tom section start */
 .tom{
-    background-image: url(../IMAGES/TOP\ BG\ IMAGE.png);
+    background-image: url(IMAGES/TOP\ BG\ IMAGE.png);
     background-size: cover;
     background-repeat: no-repeat;
     color: var(--color-default);
