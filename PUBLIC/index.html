@@ -29,8 +29,55 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 <!-- End google font cdn -->
 
+<!-- jquery CDN -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- End jqueryn CDN -->
+
+<!-- carousal -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.1/assets/owl.carousel.css">
+<!-- End carousal -->
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
 </head>
 <body>
+  <!-- Aos -->
+<script>
+  AOS.init();
+</script>
+  <!-- preloder -->
+  <div class="preloder">
+   
+  </div>
+  <script>
+    $(window).on("load", function(){
+      $(".preloder").fadeOut(1000);
+    });
+    </script>
+<!-- back to top button -->
+<div class="container-fluid bg-danger">
+  <a href="#slied" id="button"></a>
+</div>
+<script>
+var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '3000');
+});
+</script>
+
 
 <!-- start first navbar -->
 <nav class="navbar first-navbar navbar-expand-lg  ">
@@ -55,8 +102,8 @@
 
     <!-- start second navbar -->
  
-<nav class="navbar second-navbar sticky-top navbar-expand-lg" >
-    <div class="container-fluid  mx-5">
+<nav class="navbar second-navbar sticky-top navbar-expand-lg">
+    <div class="container-fluid   mx-5">
       <a class="navbar-brand" href="#"> <img src="../IMAGES/LOGO.png" class="img-fluid" alt=""> Speaker  <span>Volice of Motivation</span> </a>
      
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,10 +120,10 @@
         </li>
          
         <li class="nav-item">
-            <a class="nav-link">services</a>
+            <a class="nav-link" href="#our-speakers-two">services</a>
         </li>
           <li class="nav-item">
-            <a class="nav-link">projects</a>
+            <a class="nav-link" href="#our-speakers">projects</a>
           </li>
           <li class="nav-item">
             <a class="nav-link">prices</a>
@@ -94,20 +141,525 @@
 <section id="header" class="header">
   <div class="container-fluid">
 <div class="row">
-  <div class="col-lg-6">
+  <div class="col-lg-6" data-aos="zoom-in-up" data-aos-duration="3000">
     <img src="../IMAGES/MAN TOP.png" class="img-fluid" alt="">
   </div>
-  <div class="col-lg-6 text-white flex-column" style="float:none;margin:auto;">
+  <div class="col-lg-6 text-white flex-column text-col-second" >
     <h2>  <span>Speaking</span> to the <br> world and people </h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, est? Quidem temporibus saepe eius corporis? Consequatur facere accusantium laudantium sit odit.</p>
-    <button class="btn btn-danger">view more</button>
+    <button class="btn  view-more">view more</button>
   </div>
 </div>
   </div>
 </section>
+   <!-- End header section -->
+<!-- Start abbout us section -->
+<section id="about-us" class="about-us">
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-6 about-us-first-col" data-aos="zoom-in-up" data-aos-duration="3000">
+          <h4>about us</h4>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint beatae quo doloribus non, vero harum accusamus delectus nihil.</p>
+          <img src="../IMAGES/ABOUT US IMAGE.png" class="img-fluid" alt="">
+        </div>
+   
+        <div class="col-lg-6 mt-5 about-us-second-col" data-aos="zoom-in-down" data-aos-duration="3000">
+          <div class="row">
+            <div class="col-lg-5 coll ">
+              <i class="icofont-clock-time"></i>
+              <h5>kuldeep sharma</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vero possimus illo libero iusto .</p>
+            </div>
+          <div class="col-lg-5">
+            <i class="icofont-clock-time"></i>
+            <h5>kuldeep sharma</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vero possimus illo libero iusto .</p>
+          </div>
+          <div class="col-lg-5">
+            <i class="icofont-facebook"></i>
+            <h5>kuldeep sharma</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vero possimus illo libero iusto .</p>
+        </div>
+        <div class="col-lg-5">
+          <i class="icofont-clock-time"></i>
+          <h5>kuldeep sharma</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium vero possimus illo libero iusto .</p>
+    </div>
+  </div>
+</section>
+<!-- End about us section -->
 
 
-    <!-- End header section -->
+<!-- Our Speakers section start -->
+<section id="our-speakers"  class="our-speakers">
+  <div class="container">
+<h4>our speakers</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime et at quod fugiat? At doloribus sed nam </p>
+
+<div class="row mt-4 ">
+  <div class="col-lg-2 ">
+    <h5>KULDEEP</h5>
+    <h2>$99 <sup>00</sup></h2>
+    <h5>PRICE MONTH</h5>
+    <P>KULDEEP SHARMA</P>
+    <hr>
+    <P>KULDEEP SHARMA</P>
+    <hr>
+    <P>KULDEEP SHARMA</P>
+    <hr>
+    <button class="btn vies-details">VIEW DETAILS </button>
+  </div>
+   <div class="col-lg-2">
+    <h5>KULDEEP</h5>
+    <h2>$99 <sup>00</sup></h2>
+    <h5>PRICE MONTH</h5>
+    <P>KULDEEP SHARMA</P>
+    <hr>
+    <P>KULDEEP SHARMA</P>
+    <hr>
+    <P>KULDEEP SHARMA</P>
+    <hr>
+    <button class="btn vies-details">VIEW DETAILS </button>
+  </div>
+  <div class="col-lg-2">
+    <h5>KULDEEP</h5>
+    <h2>$99 <sup>00</sup></h2>
+    <h5>PRICE MONTH</h5>
+    <P>KULDEEP SHARMA</P>
+    <hr>
+    <P>KULDEEP SHARMA</P>
+    <hr>
+    <P>KULDEEP SHARMA</P>
+    <hr>
+    <button class="btn vies-details">VIEW DETAILS </button>
+  </div>
+  <div class="col-lg-2">
+    <h5>KULDEEP</h5>
+    <h2>$99 <sup>00</sup></h2>
+    <h5>PRICE MONTH</h5>
+    <P>KULDEEP SHARMA</P>
+    <hr>
+    <P>KULDEEP SHARMA</P>
+    <hr>
+    <P>KULDEEP SHARMA</P>
+    <hr>
+    <button class="btn vies-details">VIEW DETAILS </button>
+  </div>
+</div>
+  </div>
+  
+</section>
+<!-- Our Speakers section End -->
+<!-- Tom section start -->
+<section id="tom" class="tom">
+  <div class="container-fluid">
+    <div class="row ">
+      <div class="col-lg-8">
+        <div class="tom-text ">
+          <h4>Conference with <span>Tom Reader</span></h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita debitis provident excepturi.br Tempora, esse <br> <br> repellat!  Enim, hic. Dolorem minus natus vitae at ut ea nemo consequatur maiores? Cumque, qui omnis!</p>
+        </div>
+
+        <button class="btn get-started-today mt-5">get started today</button>
+      </div>
+        <div class="col-lg-4">
+          <div class="tom-image">
+        <img src="../IMAGES/tom-man.png" class="img-fluid" alt="">
+      </div>
+    </div>
+  </div>
+
+
+
+</section>
+
+<!-- End Tom section -->
+
+<!-- Our Speakers section-two start -->
+<section id="our-speakers-two"  class="our-speakers-two">
+  <div class="container mt-5">
+<h4>our speakers</h4>
+<p class="pp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime et at quod fugiat? At doloribus sed nam </p>
+<div class="row mt-4">
+  <div class="col-lg-2 ">
+    <img src="../IMAGES/team1.png" class="img-fluid" alt="">
+       <br>
+    
+    <h5>KULDEEP</h5>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ducimus, ex nostrum facere nesciunt</p>
+   <div class="team-social-media">
+   <i class="icofont-facebook"></i>
+   <i class="icofont-facebook"></i>
+   <i class="icofont-facebook"></i>
+   </div>
+   </div>
+     <div class="col-lg-2">
+      <img src="../IMAGES/team2.png" class="img-fluid" alt="">
+      <br>
+  
+      <h5>KULDEEP</h5>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ducimus, ex nostrum facere nesciunt</p>
+     <div class="team-social-media">
+     <i class="icofont-facebook"></i>
+     <i class="icofont-facebook"></i>
+     <i class="icofont-facebook"></i>
+     </div>
+  </div>
+  <div class="col-lg-2">
+    <img src="../IMAGES/team3.png" class="img-fluid" alt="">
+    <br>
+    
+    <h5>KULDEEP</h5>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ducimus, ex nostrum facere nesciunt</p>
+   <div class="team-social-media">
+   <i class="icofont-facebook"></i>
+   <i class="icofont-facebook"></i>
+   <i class="icofont-facebook"></i>
+   </div>
+  </div>
+  <div class="col-lg-2">
+    <img src="../IMAGES/team4.png" class="img-fluid" alt="">
+    <br>
+       <h5>KULDEEP</h5>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ducimus, ex nostrum facere nesciunt</p>
+   <div class="team-social-media">
+   <i class="icofont-facebook"></i>
+   <i class="icofont-facebook"></i>
+   <i class="icofont-facebook"></i>
+   </div>
+</div>
+  </div>
+</section>
+
+<!-- Our Speakers section-two End -->
+
+<!-- Start Gallery section -->
+<section id="gallery" class="gallery">
+  <div class="container-fluid">
+<h4>GALLERY</h4>
+<P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo consequuntur cumque dolorem cum. Asperiores porro..</P>
+<div class="row gx-2">
+  <div class="col-lg-4">
+    <img src="../IMAGES/gall1.png" class="img-fluid" alt="">
+  </div>
+  <div class="col-lg-4">
+    <img src="../IMAGES/gall2.png" class="img-fluid" alt="">
+  </div>
+  <div class="col-lg-4">
+    <img src="../IMAGES/gall3.png" class="img-fluid" alt="">
+  </div>
+  <div class="col-lg-4">
+    <img src="../IMAGES/gall4.png" class="img-fluid" alt="">
+  </div>
+  <div class="col-lg-4">
+    <img src="../IMAGES/gall5.png" class="img-fluid" alt="">
+  </div>
+  <div class="col-lg-4">
+    <img src="../IMAGES/gall6.png" class="img-fluid" alt="">
+  </div>
+</div>
+  </div>
+</section>
+<!-- End Gallery section -->
+
+
+
+<!-- New Section Start -->
+<section id="news" class="news">
+<div class="container-fluid bg-light">
+<h3>recent news</h3>
+<p style="padding-bottom: 41px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repu..
+</p>
+<div class="row">
+  <div class="col-lg-3">
+    <img src="../IMAGES/news1.png" class="img-fluid" alt="">
+    <div class="news-text-area">
+    <h4>the power of self belief</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque illo distinctio 
+      <br> <strong>Jun, 21, 2018 by admin</strong>
+    <span>0 comments</span>    </p>
+  </div>
+  </div>
+  <div class="col-lg-3">
+    <img src="../IMAGES/news2.png" class="img-fluid" alt="">
+    <div class="news-text-area">
+    <h4>the power of self belief</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque illo distinctio 
+      <br> <strong>Jun, 21, 2018 by admin</strong>
+    <span>0 comments</span>    </p>
+    </div>
+    </div>
+    <div class="col-lg-3">
+      <img src="../IMAGES/news3.png" class="img-fluid" alt="">
+      <div class="news-text-area">
+      <h4>the power of self belief</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque illo distinctio 
+        <br> <strong>Jun, 21, 2018 by admin</strong>
+      <span>0 comments</span>    </p>
+  </div>
+  </div>
+  </div>
+  </div>
+  <button class="btn more-news">more news</button>
+</section>
+<!-- New Section End -->
+
+<!-- start carousal -->
+<section id="carousel" class="carousel ">
+  <div class="demo">
+    <div class="container">
+      <div class="row">
+        <h4>testimonial</h4>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut tempore cum quos, eligendi, adipisci sequi doloribus ipsum quas quod, corporis quam! Itaque saepe, totam vel dolorum debitis earum veniam. Fugit!</p>
+        <div id="testimonial-slider" class="owl-carousel">
+          <div class="testimonial">
+       
+            <span class="icon fa fa-quote-left"></span>
+            <p class="description">
+              
+            </p>
+          
+            <div class="testimonial-content">
+              <div class="pic">
+                <img src="../IMAGES/team1.png" alt="">
+              </div>
+              <h3 class="name">Michele Miller</h3>
+              <span class="title">Project Manager</span>
+            </div>
+          </div>
+          <div class="testimonial">
+            <span class="icon fa fa-quote-left"></span>
+            <p class="description">
+              
+            </p>
+            <div class="testimonial-content">
+              <div class="pic">
+                <img src="../IMAGES/team2.png" alt="">
+              </div>
+              <h3 class="name">Patricia Knott</h3>
+              <span class="title">Web Developer</span>
+            </div>
+          </div>
+          <div class="testimonial">
+            <span class="icon fa fa-quote-left"></span>
+            <p class="description">
+              
+            </p>
+            <div class="testimonial-content">
+              <div class="pic">
+                <img src="..//IMAGES/team3.png" alt="">
+              </div>
+              <h3 class="name">Justin Ramos</h3>
+              <span class="title">Web Developer</span>
+            </div>
+          </div>
+          <div class="testimonial">
+            <span class="icon fa fa-quote-left"></span>
+            <p class="description">
+              
+            </p>
+            <div class="testimonial-content">
+              <div class="pic">
+                <img src="..//IMAGES/team4.png" alt="">
+               
+              </div>
+              <h3 class="name">Mary Huntley</h3>
+              <span class="title">Web Developer</span>
+            </div>
+          </div>
+          <div class="testimonial">
+            <span class="icon fa fa-quote-left"></span>
+            <p class="description">
+            
+            </p>
+            <div class="testimonial-content">
+              <div class="pic">
+                <img src="../IMAGES/Testimo a.png" alt="">
+              </div>
+              <h3 class="name">Aaron Newell</h3>
+              <span class="title">Web Developer</span>
+            </div>
+          </div>
+                  <div class="testimonial">
+            <span class="icon fa fa-quote-left"></span>
+            <p class="description">
+             
+            </p>
+            <div class="testimonial-content">
+              <div class="pic">
+                <img src="../IMAGES/team2.png" alt="">
+              </div>
+              <h3 class="name">Lizzie Geren</h3>
+              <span class="title">Web Developer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<!-- End testimonials -->
+
+
+
+
+<!-- start contact-us -->
+<section id="contact-us" class="contact-us">
+  <div class="container">
+<div class="row">
+  <div class="col-lg-6">
+    <h2>contact us</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur at animi </p>
+    <form action="">
+      <input type="text" placeholder="Name:" class="form-control">
+      <br>
+      <input type="text" placeholder="Email:" class="form-control">
+      <br>
+      <textarea class="form-control" placeholder="Message:" rows="5" cols="50"></textarea>
+       <button class="btn more-news">more news</button>
+      </form>
+    </div>
+    <div class="col-lg-6">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14316.45140450363!2d78.14867821596856!3d26.225522483823433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1667990031321!5m2!1sen!2sin" width="auto" class="iframe" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  </div>
+</div>
+</section>
+<!-- End contact-us -->
+<!-- start footer -->
+<footer id="footer" class="footer">
+  <div class="footer-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <img src="../IMAGES/LOGO.png" class="img-fluid" alt=""> <span class="foot-logo">Speakers</span>
+        <p style="margin-top: 10px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet neque quod recusandae! Dolore commodi veritatis tempora quisquam perspiciatis consequatur nobis sit laudantium dolorem odit, rerum, cupiditate sequi d
+          <br> <br> Amet neque quod recusandae! Dolore commodi veritatis tempora quisquam perspiciatis consequatur nobis sit laudantium dolorem odit, rerum, cupiditate sequi d
+        </p>
+      </div>
+      <div class="col-sm-2 ">
+        <ul>
+          <h4>services</h4>
+          <li> <i class="icofont-check"></i><a href="#home">home</a></li>
+          <li><i class="icofont-check"></i><a href="">about</a></li>
+          <li> <i class="icofont-check"></i><a href="#home">service</a></li>
+          <li><i class="icofont-check"></i><a href="">project</a></li>
+          <li> <i class="icofont-check"></i><a href="#home">price</a></li>
+          <li><i class="icofont-check"></i><a href="">contact</a></li>
+                </ul>
+      </div>
+      <div class="col-sm-3 ">
+        <h4>recent post</h4>
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="../IMAGES/foot1.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-sm-6">
+           <p>25 Aprial, 2007 <span>by admin</span>
+            this ifoid icon fojeoj puujd ehjfhah hfehfh</p>
+          </div>
+          <div class="col-sm-4">
+            <img src="../IMAGES/foot2.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-sm-6">
+          <p> 25 Aprial, 2007 <span>by admin</span>
+            this ifoid icon fojeoj puujd ehjfhah hfehfh</p>
+          </div>
+          <div class="col-sm-4">
+            <img src="../IMAGES/foot3.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-sm-6">
+          <p> 25 Aprial, 2007 <span>by admin</span>
+            this ifoid icon fojeoj puujd ehjfhah hfehfh</p>
+          </div>
+    </div>
+  
+</div>
+<!-- <div class="row g-0"> -->
+  <div class="col-sm-4">
+    <h4>instagram</h4>
+    <div class="row g-1">
+      <div class="col-sm-2">
+        <img src="../IMAGES/foot4.png" class="img-fluid" 
+        alt="">
+      </div>
+      <div class="col-sm-2">
+        <img src="../IMAGES/foot5.png" class="img-fluid" 
+        alt="">
+      </div>
+      <div class="col-sm-2">
+        <img src="../IMAGES/foot6.png" class="img-fluid" 
+        alt="">
+      </div>
+      <div class="row g-1">
+      <div class="col-sm-2">
+        <img src="../IMAGES/foot6.png" class="img-fluid" 
+        alt="">
+      </div>
+      <div class="col-sm-2">
+        <img src="../IMAGES/foot5.png" class="img-fluid" 
+        alt="">
+      </div>
+      <div class="col-sm-2">
+        <img src="../IMAGES/foot4.png" class="img-fluid" 
+        alt="">
+      </div>
+      <div class="row g-1">
+      <div class="col-sm-2">
+        <img src="../IMAGES/foot6.png" class="img-fluid" 
+        alt="">
+      </div>
+      <div class="col-sm-2">
+        <img src="../IMAGES/foot5.png" class="img-fluid" 
+        alt="">
+      </div>
+      <div class="col-sm-2">
+        <img src="../IMAGES/foot4.png" class="img-fluid" 
+        alt="">
+      </div>
+
+    </div>
+  </div>
+</div>
+ </div>
+ </div>
+ </div>
+ </div>
+  </div>
+</footer>
+<!-- end footer -->
+<!-- last footer start -->
+<section id="lst-footer" class="lst-footer">
+  <div class="container-fluid">
+    <p>&#169 This is copyride for reserv by company</p>
+     </div>
+     <div class="footer-social-icon">
+      <i class="icofont-facebook"></i>
+      <i class="icofont-twitter"></i>
+      <i class="icofont-whatsapp"></i>
+      <i class="icofont-linkedin"></i>
+     </div>
+</section>
+<!-- last footer end -->
+
+<!-- carousal -->
+<script>
+  $(document).ready(function() {
+  $("#testimonial-slider").owlCarousel({
+    items: 3,
+    itemsDesktop:[100,3],
+    itemsDesktopSmall:[979,2],
+    itemsTablet:[768, 2],
+    itemsMobile:[650, 1],
+    pagination: true,
+    autoPlay: true
+  });
+});
+</script>
+<!-- carousel -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js" integrity="sha512-9CWGXFSJ+/X0LWzSRCZFsOPhSfm6jbnL+Mpqo0o8Ke2SYr8rCTqb4/wGm+9n13HtDE1NQpAEOrMecDZw4FXQGg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
 </body>
 
