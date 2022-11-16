@@ -90,6 +90,12 @@ padding: 0px!important;
     }
   }
 
+  @media (max-width:992px) {
+    .footer .col-sm-4, .col-sm-6 {
+      display: none;
+    }
+  }
+
 .container-fluid, .coutainer{
     padding: 0px;  
 }
@@ -287,6 +293,7 @@ text-align: center;
 box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 padding: 20px 0px;
 margin-left: 20px;
+transition: 1.1s;
 
 }
 .col-lg-2 h2{
@@ -297,7 +304,7 @@ margin-left: 20px;
    color: var(--color-default);
 }
 .our-speakers .col-lg-2:hover{
-    transform: scale(1.1);
+    transform: scale(0.9);
     border-radius: 10px;
     background: #000;
     color: wheat;
